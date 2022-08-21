@@ -14,8 +14,8 @@
 
 void	ft_putchar(char c);
 
-char	toprint1;
-char	toprint2;
+char	start_end_char;
+char	mid_char;
 int		xcounter;
 int		ycounter;
 
@@ -23,18 +23,18 @@ void	char_template(int y)
 {
 	if (ycounter == 1)
 	{
-		toprint1 = 'A';
-		toprint2 = 'B';
+		start_end_char = 'A';
+		mid_char = 'B';
 	}
 	else if (ycounter < y)
 	{
-		toprint1 = 'B';
-		toprint2 = ' ';
+		start_end_char = 'B';
+		mid_char = ' ';
 	}
 	else if (ycounter == y)
 	{
-		toprint1 = 'C';
-		toprint2 = 'B';
+		start_end_char = 'C';
+		mid_char = 'B';
 	}
 }
 
@@ -42,11 +42,11 @@ void	print_content(int x)
 {
 	if (xcounter == x || xcounter == 1)
 	{
-		ft_putchar(toprint1);
+		ft_putchar(start_end_char);
 	}
 	else
 	{
-		ft_putchar(toprint2);
+		ft_putchar(mid_char);
 	}
 }
 

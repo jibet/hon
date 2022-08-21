@@ -6,7 +6,7 @@
 /*   By: ckam-hoo <ckam-hoo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 18:15:18 by ckam-hoo          #+#    #+#             */
-/*   Updated: 2022/08/20 18:44:57 by ckam-hoo         ###   ########.fr       */
+/*   Updated: 2022/08/21 16:44:43 by ckam-hoo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,39 @@
 
 void	ft_putchar(char c);
 
-char	start_end_char;
-char	mid_char;
-int		xcounter;
-int		ycounter;
+char	g_start_end_char;
+char	g_mid_char;
+int		g_xcounter;
+int		g_ycounter;
 
 void	char_template(int y)
 {
-	if (ycounter == 1)
+	if (g_ycounter == 1)
 	{
-		start_end_char = 'A';
-		mid_char = 'B';
+		g_start_end_char = 'A';
+		g_mid_char = 'B';
 	}
-	else if (ycounter < y)
+	else if (g_ycounter < y)
 	{
-		start_end_char = 'B';
-		mid_char = ' ';
+		g_start_end_char = 'B';
+		g_mid_char = ' ';
 	}
-	else if (ycounter == y)
+	else if (g_ycounter == y)
 	{
-		start_end_char = 'C';
-		mid_char = 'B';
+		g_start_end_char = 'C';
+		g_mid_char = 'B';
 	}
 }
 
 void	print_content(int x)
 {
-	if (xcounter == x || xcounter == 1)
+	if (g_xcounter == x || g_xcounter == 1)
 	{
-		ft_putchar(start_end_char);
+		ft_putchar(g_start_end_char);
 	}
 	else
 	{
-		ft_putchar(mid_char);
+		ft_putchar(g_mid_char);
 	}
 }
 
@@ -58,18 +58,18 @@ void	rush(int x, int y)
 	}	
 	else
 	{
-		ycounter = 1;
-		while (ycounter <= y)
+		g_ycounter = 1;
+		while (g_ycounter <= y)
 		{
 			char_template(y);
-			xcounter = 1;
-			while (xcounter <= x)
+			g_xcounter = 1;
+			while (g_xcounter <= x)
 			{
 				print_content(x);
-				++xcounter;
+				++g_xcounter;
 			}
-		ft_putchar('\n');
-		++ycounter;
+			ft_putchar('\n');
+			++g_ycounter;
 		}
 	}
 }

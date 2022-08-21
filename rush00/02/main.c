@@ -6,17 +6,17 @@
 /*   By: ckam-hoo <ckam-hoo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/20 18:02:23 by ckam-hoo          #+#    #+#             */
-/*   Updated: 2022/08/20 18:10:22 by ckam-hoo         ###   ########.fr       */
+/*   Updated: 2022/08/21 16:56:56 by ckam-hoo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush02.c"
-#include "ft_putchar.c"
+#include <stdio.h>
 
-void    rush(int x, int y);
+void	rush(int x, int y);
+void	ft_putchar(char c);
 
 int	main(void)
 {
-	rush(6, 3);
+	rush(3, 4);
 	return (0);
 }
